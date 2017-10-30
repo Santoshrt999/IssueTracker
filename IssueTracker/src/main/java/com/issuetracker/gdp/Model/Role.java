@@ -5,11 +5,26 @@ public class Role {
 	private int roleid;
 	private String roleDesc;
 
+	
+
+	
+	
+
+
+
 	public Role(int roleid, String roleDesc) {
 		super();
 		this.roleid = roleid;
 		this.roleDesc = roleDesc;
 	}
+
+
+
+	public Role() {
+		super();
+	}
+
+
 
 	public int getRoleid() {
 		return roleid;

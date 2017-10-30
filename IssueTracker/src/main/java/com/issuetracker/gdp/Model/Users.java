@@ -1,17 +1,21 @@
 package com.issuetracker.gdp.Model;
 
-import java.util.Date;
+import java.sql.Timestamp;
+
 
 public class Users {
 	
 	private String username;
 	private String fname;
 	private String lname;
-	private Date dateCreated;
-	private Date dateModified;
+	private Timestamp dateCreated;
+	private Timestamp dateModified;
 	
+	public Users() {
+		//super();
+	}
 	public Users(String username, String fname, String lname,
-			Date dateCreated, Date dateModified) {
+			Timestamp dateCreated, Timestamp dateModified) {
 		super();
 		this.username = username;
 		this.fname = fname;
@@ -37,16 +41,16 @@ public class Users {
 	public void setLname(String lname) {
 		this.lname = lname;
 	}
-	public Date getDateCreated() {
+	public Timestamp getDateCreated() {
 		return dateCreated;
 	}
-	public void setDateCreated(Date dateCreated) {
+	public void setDateCreated(Timestamp dateCreated) {
 		this.dateCreated = dateCreated;
 	}
-	public Date getDateModified() {
+	public Timestamp getDateModified() {
 		return dateModified;
 	}
-	public void setDateModified(Date dateModified) {
+	public void setDateModified(Timestamp dateModified) {
 		this.dateModified = dateModified;
 	}
 	@Override

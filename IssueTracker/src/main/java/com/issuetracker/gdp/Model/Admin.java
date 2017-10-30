@@ -6,16 +6,20 @@ public class Admin {
 	private String AdminFname;
 	private String AdminLname;
 
-	public Admin(int adminid, String adminFname, String adminLname) {
-		super();
-		Adminid = adminid;
+	
+	public Admin(String adminFname, String adminLname) {
+		
 		AdminFname = adminFname;
 		AdminLname = adminLname;
 	}
 
+
+
 	public Admin() {
-		// super();
+		
 	}
+
+
 
 	public int getAdminid() {
 		return Adminid;

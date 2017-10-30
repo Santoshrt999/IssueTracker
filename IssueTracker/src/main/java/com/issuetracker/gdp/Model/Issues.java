@@ -1,21 +1,24 @@
 package com.issuetracker.gdp.Model;
 
+import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
 
 public class Issues {
 
-	private int issueid;
+	private int issueid2;
 	private String issuetitle;
 	private String issueDesc;
-	private Project projectid;
-	private Role roleid;
-	private List<Users> users;
-	private Date datecreated;
-	private Date datemodified;
+	private int projectid;
+	private int roleid;
+	private String users;
+	private Timestamp datecreated;
+	private Timestamp datemodified;
 
+	
+/*
 	public Issues(int issueid, String issuetitle, String issueDesc,
-			Project projectid, Role roleid, List<Users> users,
+			Project projectid, Role roleid, Users users,
 			Date datecreated, Date datemodified) {
 		super();
 		this.issueid = issueid;
@@ -27,13 +30,41 @@ public class Issues {
 		this.datecreated = datecreated;
 		this.datemodified = datemodified;
 	}
+	*/
 
-	public int getIssueid() {
-		return issueid;
+	public Issues() {
+		
 	}
 
-	public void setIssueid(int issueid) {
-		this.issueid = issueid;
+
+
+
+	
+
+	public Issues(int issueid2, String issuetitle, String issueDesc, int projectid, int roleid, String users,
+			Date datecreated, Date datemodified) {
+		super();
+		this.issueid2 = issueid2;
+		this.issuetitle = issuetitle;
+		this.issueDesc = issueDesc;
+		this.projectid = projectid;
+		this.roleid = roleid;
+		this.users = users;
+		this.datecreated = (Timestamp) datecreated;
+		this.datemodified = (Timestamp) datemodified;
+	}
+
+
+
+
+
+
+	public int getIssueid2() {
+		return issueid2;
+	}
+
+	public void setIssueid(int issueid2) {
+		this.issueid2 = issueid2;
 	}
 
 	public String getIssuetitle() {
@@ -52,27 +83,27 @@ public class Issues {
 		this.issueDesc = issueDesc;
 	}
 
-	public Project getProjectid() {
+	public int getProjectid() {
 		return projectid;
 	}
 
-	public void setProjectid(Project projectid) {
+	public void setProjectid(int projectid) {
 		this.projectid = projectid;
 	}
 
-	public Role getRoleid() {
+	public int getRoleid() {
 		return roleid;
 	}
 
-	public void setRoleid(Role roleid) {
-		this.roleid = roleid;
+	public void setRoleid(int string) {
+		this.roleid = string;
 	}
 
-	public List<Users> getUsers() {
+	public String getUsers() {
 		return users;
 	}
 
-	public void setUsers(List<Users> users) {
+	public void setUsers(String users) {
 		this.users = users;
 	}
 
@@ -81,7 +112,7 @@ public class Issues {
 	}
 
 	public void setDatecreated(Date datecreated) {
-		this.datecreated = datecreated;
+		this.datecreated = (Timestamp) datecreated;
 	}
 
 	public Date getDatemodified() {
@@ -89,12 +120,12 @@ public class Issues {
 	}
 
 	public void setDatemodified(Date datemodified) {
-		this.datemodified = datemodified;
+		this.datemodified = (Timestamp) datemodified;
 	}
 
 	@Override
 	public String toString() {
-		return "Issues [issueid=" + issueid + ", issuetitle=" + issuetitle
+		return "Issues [issueid=" + issueid2 + ", issuetitle=" + issuetitle
 				+ ", issueDesc=" + issueDesc + ", projectid=" + projectid
 				+ ", roleid=" + roleid + ", users=" + users + ", datecreated="
 				+ datecreated + ", datemodified=" + datemodified + "]";

@@ -1,5 +1,6 @@
 package com.issuetracker.gdp.Model;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 public class Comments {
@@ -8,18 +9,18 @@ public class Comments {
 	private Issues issueid;
 	private String CommentDesc;
 	private String CommentBy;
-	private Date datecreated;
-	private Date datemodified;
+	private Timestamp datecreated;
+	private Timestamp datemodified;
 
-	public Comments(int commentid, Issues issueid, String commentDesc,
-			String commentBy, Date datecreated, Date datemodified) {
-		super();
-		this.commentid = commentid;
+
+
+	public Comments(Issues issueid, String commentDesc, String commentBy, Date datecreated, Date datemodified) {
+		//super();
 		this.issueid = issueid;
 		CommentDesc = commentDesc;
 		CommentBy = commentBy;
-		this.datecreated = datecreated;
-		this.datemodified = datemodified;
+		this.datecreated = (Timestamp) datecreated;
+		this.datemodified = (Timestamp) datemodified;
 	}
 
 	public int getCommentid() {
@@ -59,7 +60,7 @@ public class Comments {
 	}
 
 	public void setDatecreated(Date datecreated) {
-		this.datecreated = datecreated;
+		this.datecreated = (Timestamp) datecreated;
 	}
 
 	public Date getDatemodified() {
@@ -67,7 +68,7 @@ public class Comments {
 	}
 
 	public void setDatemodified(Date datemodified) {
-		this.datemodified = datemodified;
+		this.datemodified = (Timestamp) datemodified;
 	}
 
 	@Override

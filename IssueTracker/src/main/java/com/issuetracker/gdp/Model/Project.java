@@ -1,27 +1,28 @@
 package com.issuetracker.gdp.Model;
 
+import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
 
 public class Project {
 //Added the list of user code after creating the class. look for bugs
 	private int projectid;
-	private String projecttitle;
+	private String projectTitle;
 	private String projectDesc;
 	private Role roleid;
-	private List<Users> users;
-	private Date datecreated;
-	private Date datemodified;
-	public Project(int projectid, String projecttitle, String projectDesc,
-			Role roleid, Users users, Date datecreated, Date datemodified) {
-		super();
+	private Users users;
+	private Timestamp dateCreated;
+	private Timestamp dateModified;
+	public Project(int projectid, String projectTitle, String projectDesc,
+			Role roleid, Users users2, Timestamp dateCreated, Timestamp dateModified) {
+	
 		this.projectid = projectid;
-		this.projecttitle = projecttitle;
+		this.projectTitle = projectTitle;
 		this.projectDesc = projectDesc;
 		this.roleid = roleid;
-		this.users = (List<Users>) users;
-		this.datecreated = datecreated;
-		this.datemodified = datemodified;
+		this.users = users2;
+		this.dateCreated = dateCreated;
+		this.dateModified =  dateModified;
 	}
 	public int getProjectid() {
 		return projectid;
@@ -29,11 +30,11 @@ public class Project {
 	public void setProjectid(int projectid) {
 		this.projectid = projectid;
 	}
-	public String getProjecttitle() {
-		return projecttitle;
+	public String getProjectTitle() {
+		return projectTitle;
 	}
-	public void setProjecttitle(String projecttitle) {
-		this.projecttitle = projecttitle;
+	public void setProjecttitle(String projectTitle) {
+		this.projectTitle = projectTitle;
 	}
 	public String getProjectDesc() {
 		return projectDesc;
@@ -51,26 +52,26 @@ public class Project {
 		return (Users) users;
 	}
 	public void setUsername(Users users) {
-		this.users = (List<Users>) users;
+		this.users = (Users) users;
 	}
 	public Date getDatecreated() {
-		return datecreated;
+		return dateCreated;
 	}
-	public void setDatecreated(Date datecreated) {
-		this.datecreated = datecreated;
+	public void setDatecreated( Timestamp dateCreated) {
+		this.dateCreated =  dateCreated;
 	}
 	public Date getDatemodified() {
-		return datemodified;
+		return dateModified;
 	}
-	public void setDatemodified(Date datemodified) {
-		this.datemodified = datemodified;
+	public void setDatemodified(Timestamp dateModified) {
+		this.dateModified = dateModified;
 	}
 	@Override
 	public String toString() {
 		return "Project [projectid=" + projectid + ", projecttitle="
-				+ projecttitle + ", projectDesc=" + projectDesc + ", roleid="
-				+ roleid + ", username=" + users + ", datecreated="
-				+ datecreated + ", datemodified=" + datemodified + "]";
+				+ projectTitle + ", projectDesc=" + projectDesc + ", roleid="
+				+ roleid + ", username=" + users + ", dateCreated="
+				+ dateCreated + ", datemodified=" + dateModified + "]";
 	}
 	
 	
